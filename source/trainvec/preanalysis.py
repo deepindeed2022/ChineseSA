@@ -3,7 +3,8 @@ __author__ = 'huang'
 
 import os
 import sys
-from gensim import utils
+
+from gensim import utils as utils
 
 class tCorpus:
     """Handle the corpus to common format"""
