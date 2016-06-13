@@ -1,6 +1,6 @@
-/data/*
-/model/*
-/document/*
+data
+model
+document
 *.exe
 
 *.pyc
