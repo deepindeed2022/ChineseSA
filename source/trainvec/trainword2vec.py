@@ -4,8 +4,7 @@ import logging
 import sys
 
 
-class DataLossError(Exception):
-	pass
+
 
 
 if __name__ == '__main__':

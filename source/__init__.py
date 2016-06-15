@@ -10,7 +10,7 @@ try:
 	import gensim
 	import jieba
 except ImportError:
-	import sys
-	sys.path.append('../3rdpart/')
+	print('please sudo pip install gensim and jieba python-package')
 finally:
 	print("---------Check package finished!---------")
+
