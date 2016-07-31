@@ -2,7 +2,7 @@
 import sys
 import os.path
 sys.path.append('../source/')
-from  utility.function import tran2simple,seperate_word, remove_word
+from  utility.function import tran2simple,seperate_word, remove_word, getSemiWords
 
 import unittest
 __doc__= """
@@ -45,7 +45,14 @@ class functionTest(unittest.TestCase):
 		self.assertEqual(expect, remove_word(line))
 		line = line.encode('utf8')
 		self.assertNotEqual(expect, remove_word(line))
+
+	def testgetSemiWords(self):
+		self.assertNotEqual(None, getSemiWords())
+		with self.assertRaises(IOError):
+			getSemiWords(datadir=os.path.abspath('../datanotexit/ntusd/'))
 		
+		self.assertEqual({'noexist':None}, getSemiWords(fnames={'noexist':'noexist'}))
+
 if __name__ == '__main__':
 	print __doc__
 	unittest.main()

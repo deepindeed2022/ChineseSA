@@ -2,6 +2,7 @@
 import re
 import os.path
 import logging
+
 from thirdpart.chinese.langconv import Converter
 import thirdpart.jieba as jieba
 
@@ -14,7 +15,6 @@ def startlog(_format='%(asctime)s: %(levelname)s: %(message)s',_level=logging.IN
     logging.basicConfig(format = _format)
     logging.root.setLevel(level=_level)
     return logger
-
 
 def tran2simple(line):
     if isinstance(line,list):
@@ -57,4 +57,27 @@ def seperate_word(line, space=' '):
     '''
     seg_list = jieba.cut(line)
     return space.join(seg_list)
+
+
+NTUSDDIR = os.path.abspath('../data/ntusd/')
+def getSemiWords(datadir = NTUSDDIR, fnames={'POSITIVE':'ntusd-positive.txt', 'NEGATIVE':'ntusd-negative.txt'}):
+    def load(fname):
+        if not os.path.isfile(fname):
+            raise IOError('Cannot find such file: '+ fname)
+        words = []
+        with open(fname, 'r') as f:
+            for line in f.readlines():
+                words.append(line.strip())
+        return words
+    if not os.path.isdir(datadir):
+        raise IOError('Cannot find such directory:'+datadir)
+
+    ret = dict()
+    for (key, fname) in fnames.iteritems():
+        fname = os.path.join(datadir, fname)
+        try:
+            ret[key] = load(fname)
+        except IOError, e:
+            ret[key] = None
+    return ret
 
