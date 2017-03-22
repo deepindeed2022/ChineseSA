@@ -1,6 +1,6 @@
-# ChineseSA
+# 中文情感分析
 ## Brief lntroduction
-The software is **Chinese sentiment analysis** for NLP programming work. Using [word2vec](http://radimrehurek.com/gensim/models/word2vec.html) to process word presentation. And using SVM method
+The software is **Chinese sentiment analysis** for NLP programming work. Using [word2vec](http://radimrehurek.com/gensim/models/word2vec.html) to process word presentation. And using KNN method
 as classifier.
 
 ## Working Principle
