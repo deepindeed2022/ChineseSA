@@ -8,8 +8,12 @@ as classifier.
 ## Using Guide
 
 ## Reference
-[^1](中文语料库总结blog-http://blog.csdn.net/killua_hzl/article/details/7666055)
-[^2](Gensim Tutorial-http://radimrehurek.com/gensim/tutorial.html)
-[^3](“结巴”中文分词-https://github.com/fxsjy/jieba)
-[^4](word2vec-http://radimrehurek.com/gensim/models/word2vec.html)
-[^5](svm作为分类器的其他案例-http://cwlseu.github.io/blog/Face-detection_based_SVM.html)
+- [中文语料库总结blog](http://blog.csdn.net/killua_hzl/article/details/7666055)
+
+- [Gensim Tutorial](http://radimrehurek.com/gensim/tutorial.html)
+
+- [“结巴”中文分词](https://github.com/fxsjy/jieba)
+
+- [word2vec](http://radimrehurek.com/gensim/models/word2vec.html)
+
+- [svm作为分类器的其他案例](http://cwlseu.github.io/blog/Face-detection_based_SVM.html)
